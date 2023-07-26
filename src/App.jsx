@@ -1,7 +1,6 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import PDFGenerator from './PDFGenerator';
 
 function App() {
   const [data, setData] = useState()
@@ -32,7 +31,7 @@ function App() {
   
       if (response.ok) {
         const data = await response.json();
-        console.log(data);
+        // console.log(data);
         // Process and use the data as needed
         setData(data)
         return data;
@@ -65,11 +64,8 @@ function App() {
     <>
       <button onClick={home}>Home</button>
       <button onClick={trial}>Trial</button>
-      {data && data.map((obj) => (
-        <div>
-          <h4>{obj.text}</h4> <span>{obj.prediction}</span>
-        </div>
-      ))}
+      
+      {data && <PDFGenerator theData={data}/>}
     </>
   )
 }
