@@ -98,12 +98,12 @@ const PDFGenerator = ({ theData }) => {
   return (
     <div>
       {/* Button to generate and download the PDF */}
-      <PDFDownloadLink document={<PDFContent data={theData}/>} fileName="The_Report.pdf">
+      <PDFDownloadLink document={<PDFContent data={theData}/>} fileName="The_Report.pdf" style={{ margin: '20px auto' }}>
         {({ blob, url, loading, error }) => (loading ? 'Loading document...' : 'Download PDF')}
       </PDFDownloadLink>
 
       {/* PDF Viewer */}
-      <div style={{ height: '1000px', width: '800px', margin: '20px auto' }}>
+      <div style={{ height: '1000px', width: '300px', margin: '20px auto' }}>
         <PDFViewer>
           <PDFContent data={theData}/>
         </PDFViewer>
