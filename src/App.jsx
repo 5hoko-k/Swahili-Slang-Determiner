@@ -106,11 +106,11 @@ function App() {
 
   return (
     <>
-<Typography variant='h2' gutterBottom>Slang Detector</Typography>
+<Typography variant='h2' gutterBottom>Chat Analyser</Typography>
 
       <button onClick={trial}>Scan Chats</button>
       
-      <Grid my={4} container justifyContent="space-around" alignItems="center">
+      {/* <Grid my={4} container justifyContent="space-around" alignItems="center">
       <Grid item xs={8}> 
         <CustomTextField
           id="outlined-basic"
@@ -126,7 +126,7 @@ function App() {
       <Grid item mt={3}>
         <p style={{ margin: 0 }}>Result: {result}</p>
       </Grid>
-    </Grid>
+    </Grid> */}
 
         
 
